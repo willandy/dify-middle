@@ -1,0 +1,1 @@
+From quay.io/coreos/etcd:v3.5.5
