@@ -1,0 +1,9 @@
+docker run -d -p 7474:7474 -p 7687:7687 --name neo4j_5.26.3_enterprise \
+	-e "NEO4J_AUTH=neo4j/12345678" \
+	-e NEO4J_dbms_default__database=neo4j \
+	-e NEO4J_ACCEPT_LICENSE_AGREEMENT=yes \
+	-v /opt/software/neo4j/data:/data \
+	-v /opt/software/neo4j/logs:/logs \
+	-v /opt/software/neo4j/conf:/var/lib/neo4j/conf \
+	-v /opt/software/neo4j/import:/var/lib/neo4j/import \
+	neo4j:5.26.3-enterprise
